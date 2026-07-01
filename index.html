@@ -3,258 +3,280 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DISHA Intelligence — Direction. Intelligence. Impact.</title>
-<meta name="description" content="DISHA Intelligence helps growing companies turn messy data into clear direction — strategy, engineering, analytics and AI, delivered by a senior AI consultancy." />
+<title>DISHA Intelligence — AI Strategy, Built for Scale</title>
+<meta name="description" content="Transform scattered data into strategic intelligence. DISHA delivers AI strategy, engineering, and governance for enterprises." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/premium.css" />
+<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
 
-<header class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/>
+    <a href="#" class="brand">
+      <div class="brand-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15 10H23L17 15L19 23L12 18L5 23L7 15L1 10H9L12 2Z"/>
         </svg>
-      </span>
-      <span>
-        <span class="brand-name">DISHA</span>
-        <span class="brand-tag">AI Consultancy</span>
-      </span>
+      </div>
+      <span>DISHA</span>
     </a>
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#approach" class="nav-link">Approach</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#" class="nav-link">Pricing</a>
+    </div>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-outline">Schedule Discovery Call</a>
-      <button type="button" class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <a href="#" class="btn btn-primary">Schedule Call</a>
     </div>
   </div>
-</header>
+</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid-bg"></div>
+<!-- HERO SECTION — Premium asymmetric layout -->
+<section style="padding: 120px 0 60px; position: relative; overflow: hidden;">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
   <div class="container">
-    <div class="hero-content">
-      <h1>Direction. Intelligence. <span class="accent">Impact.</span></h1>
-      <p class="lead">DISHA Intelligence turns scattered, unreliable data into a clear strategic asset. We assess your data and stand up the cloud pipelines and dashboards to run on, layer in predictive models and governance as you scale, and can even put a natural-language chatbot on top so anyone on your team can just ask — no dashboard required. One partner, from raw data to AI-driven decisions.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">Schedule Your Data Audit</a>
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="num">40+</div>
-          <div class="label">Data systems modernized</div>
-        </div>
-        <div>
-          <div class="num">3.2x</div>
-          <div class="label">Avg. reporting speed gain</div>
-        </div>
-        <div>
-          <div class="num">98%</div>
-          <div class="label">Client retention rate</div>
-        </div>
+    <div style="max-width: 900px; margin-bottom: 60px;">
+      <p class="caption reveal-1">ENTERPRISE AI TRANSFORMATION</p>
+      <h1 class="reveal-2" style="margin: 20px 0 24px; line-height: 1.15;">
+        Your data. Your <span class="text-accent">competitive edge.</span>
+      </h1>
+      <p class="lead reveal-3" style="max-width: 720px; margin-bottom: 40px;">
+        We turn scattered data into clear strategic intelligence — through AI strategy, enterprise engineering, and governance frameworks that actually work.
+      </p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;" class="reveal-4">
+        <button type="button" class="btn btn-primary">Start with Strategy</button>
+        <button type="button" class="btn btn-secondary">Explore Capabilities</button>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- SERVICE CARDS -->
-<section>
-  <div class="container">
-    <div class="section-head center">
-      <div class="section-tag" style="justify-content:center;color:var(--indigo-500)">What We Do</div>
-      <h2>Five ways we turn data into direction</h2>
-      <p>From a single audit to a fully managed AI function, every engagement is built around one outcome: decisions get easier.</p>
-    </div>
-    <div class="grid-5">
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12l4-4 4 4 6-7 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <!-- Hero stats — Asymmetric grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; max-width: 800px; margin-top: 80px;">
+      <div class="reveal-2">
+        <div style="font-size: 2.8rem; font-family: var(--font-display); font-weight: 800; color: var(--navy-950); margin-bottom: 6px;">
+          <span class="stat-counter" data-target="40">0</span>+
         </div>
-        <h3>Data Strategy &amp; Audit</h3>
-        <p>A full diagnostic of your data stack, quality, and gaps — with a prioritized roadmap to fix what matters first.</p>
+        <p class="text-sm text-muted">Data modernizations</p>
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M17.5 14v7M14 17.5h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="reveal-3">
+        <div style="font-size: 2.8rem; font-family: var(--font-display); font-weight: 800; background: linear-gradient(135deg, var(--teal-500), var(--purple-600)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px;">
+          3.2x
         </div>
-        <h3>Data Engineering &amp; Pipelines</h3>
-        <p>Reliable pipelines that connect every source into one clean, governed warehouse — built to scale with you.</p>
+        <p class="text-sm text-muted">Faster decision-making</p>
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V9M11 19V4M18 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="reveal-4">
+        <div style="font-size: 2.8rem; font-family: var(--font-display); font-weight: 800; color: var(--amber-500); margin-bottom: 6px;">
+          98%
         </div>
-        <h3>Analytics &amp; BI Dashboards</h3>
-        <p>Self-serve dashboards your team actually opens — built around the metrics that drive real decisions.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3>AI &amp; ML Implementation</h3>
-        <p>From forecasting to intelligent automation — practical AI built on a foundation of trustworthy data.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Data Chatbot</h3>
-        <p>Ask your data questions in plain English and get instant reports, predictions, and context back — no dashboard required.</p>
+        <p class="text-sm text-muted">Client retention</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY DISHA -->
-<section class="bg-alt">
-  <div class="container">
-    <div class="grid-2" style="align-items:center;gap:60px;">
-      <div>
-        <div class="section-tag">Why DISHA</div>
-        <h2>We don't just build dashboards. We build clarity.</h2>
-        <p style="margin-top:18px;font-size:1.05rem;">Most data projects stall because they start with tools instead of decisions. We start with the questions your business actually needs answered — then engineer the data to answer them, reliably and on demand.</p>
-        <ul class="card-list" style="margin-top:28px;gap:16px;">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Senior consultants only — no junior hand-offs</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Fixed-scope engagements with clear timelines</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Tool-agnostic — we recommend what fits, not what we sell</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Built-in knowledge transfer so you're never locked in</li>
-        </ul>
-        <a href="about.html" class="btn btn-outline-dark mt-lg" style="margin-top:32px;">More About Us</a>
+<!-- SERVICES — Split layout with text right, visual left -->
+<section id="services" style="padding: 120px 0; position: relative;">
+  <div class="container-wide">
+    <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center;">
+      <!-- Visual side -->
+      <div class="scroll-left" style="background: linear-gradient(135deg, rgba(94, 234, 212, 0.1), rgba(109, 94, 245, 0.1)); border-radius: 32px; padding: 60px 40px; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+          <div style="width: 200px; height: 200px; border-radius: 24px; background: linear-gradient(135deg, var(--teal-500), var(--purple-600)); margin: 0 auto 30px; opacity: 0.2;"></div>
+          <p class="text-muted">Data Architecture Visualization</p>
+        </div>
       </div>
-      <div class="grid-2" style="gap:20px;">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"DISHA rebuilt our reporting from scratch in six weeks. We finally trust our numbers."</p>
-          <div class="who">
-            <div class="avatar">RM</div>
-            <div><strong>Riya Mehta</strong><span>COO, Northwind Retail</span></div>
+
+      <!-- Text side -->
+      <div class="scroll-right">
+        <p class="caption">WHAT WE DELIVER</p>
+        <h2 style="margin: 16px 0 32px;">Eight capabilities. One partner.</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <div>
+            <h4 style="color: var(--navy-950); margin-bottom: 8px;">AI Strategy &amp; Consulting</h4>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Map AI opportunity. Assess data readiness. Define roadmap.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--navy-950); margin-bottom: 8px;">Enterprise Development</h4>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Production-grade pipelines, models, governance. No shortcuts.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--navy-950); margin-bottom: 8px;">AI Integration</h4>
+            <p style="font-size: 0.95rem; line-height: 1.6;">Connect AI to ERP, CRM, workflows. Real impact.</p>
           </div>
         </div>
-        <div class="testimonial-card" style="margin-top:36px;">
-          <div class="stars">★★★★★</div>
-          <p>"The audit alone paid for itself — they found $400K in pricing errors in week one."</p>
-          <div class="who">
-            <div class="avatar">JT</div>
-            <div><strong>James Turner</strong><span>CEO, Fieldstone SaaS</span></div>
-          </div>
-        </div>
+
+        <button type="button" class="btn btn-outline" style="margin-top: 32px;">Explore All 8 Capabilities →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CASE STUDIES PREVIEW -->
-<section>
+<!-- RESULTS — Large feature callout, no cards -->
+<section style="padding: 120px 0; background: linear-gradient(180deg, rgba(94, 234, 212, 0.05) 0%, transparent 100%); position: relative;">
   <div class="container">
-    <div class="eyebrow-row" style="margin-bottom:40px;">
-      <div>
-        <div class="section-tag">Proven Results</div>
-        <h2>Recent client outcomes</h2>
-      </div>
-      <a href="case-studies.html" class="btn btn-outline-dark">View All Case Studies</a>
+    <div class="scroll-up" style="text-align: center; max-width: 900px; margin: 0 auto 80px;">
+      <p class="caption">PROVEN OUTCOMES</p>
+      <h2 style="margin: 16px 0 24px;">The data gets clearer. Decisions get faster.</h2>
+      <p class="lead" style="font-size: 1.15rem; color: var(--gray-600);">
+        Across 40+ engagements, we've helped enterprises move from data confusion to strategic clarity.
+      </p>
     </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">🛒</div>
-        <h3>Northwind Retail</h3>
-        <p>Unified 6 sales channels into one warehouse, cutting reporting time from 3 days to 4 hours.</p>
-        <ul class="card-list">
-          <li><strong style="color:var(--ink-900)">+32%</strong>&nbsp;forecast accuracy</li>
-        </ul>
+
+    <!-- Asymmetric result grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div class="card scroll-up reveal-1" style="grid-column: span 1;">
+        <p class="caption" style="margin-bottom: 12px;">Northwind Retail</p>
+        <div style="font-size: 2.2rem; font-family: var(--font-display); font-weight: 800; color: var(--teal-500); margin-bottom: 8px;">+32%</div>
+        <p style="font-size: 0.9rem;">Forecast accuracy. Unified 6 sales channels.</p>
       </div>
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>Fieldstone SaaS</h3>
-        <p>Built a self-serve revenue dashboard, eliminating 15+ hrs/week of manual spreadsheet work.</p>
-        <ul class="card-list">
-          <li><strong style="color:var(--ink-900)">15 hrs</strong>&nbsp;saved weekly</li>
-        </ul>
+
+      <div class="card scroll-up reveal-2" style="grid-column: span 1; background: linear-gradient(135deg, rgba(94, 234, 212, 0.08), rgba(109, 94, 245, 0.08));">
+        <p class="caption" style="margin-bottom: 12px;">Fieldstone SaaS</p>
+        <div style="font-size: 2.2rem; font-family: var(--font-display); font-weight: 800; color: var(--amber-500); margin-bottom: 8px;">15 hrs</div>
+        <p style="font-size: 0.9rem;">Saved weekly on manual reporting.</p>
       </div>
-      <div class="card">
-        <div class="card-icon">🏥</div>
-        <h3>Atlas Health Network</h3>
-        <p>Deployed a patient-flow forecasting model that reduced staffing overruns by a third.</p>
-        <ul class="card-list">
-          <li><strong style="color:var(--ink-900)">-34%</strong>&nbsp;staffing overruns</li>
-        </ul>
+
+      <div class="card scroll-up reveal-3" style="grid-column: span 1;">
+        <p class="caption" style="margin-bottom: 12px;">Atlas Health</p>
+        <div style="font-size: 2.2rem; font-family: var(--font-display); font-weight: 800; background: linear-gradient(135deg, var(--purple-600), var(--teal-500)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">-34%</div>
+        <p style="font-size: 0.9rem;">Staffing overruns through forecasting.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section>
+<!-- APPROACH — Timeline with unique layout -->
+<section id="approach" style="padding: 120px 0; background: var(--gray-50); position: relative;">
   <div class="container">
-    <div class="cta-banner">
-      <div class="cta-text">
-        <h2>Not sure where your data stands?</h2>
-        <p>Start with a 45-minute Data Audit — a clear, jargon-free picture of what's working, what's broken, and what to fix first.</p>
+    <div class="scroll-up" style="text-align: center; margin-bottom: 80px;">
+      <p class="caption">OUR PROCESS</p>
+      <h2>From discovery to impact in four steps</h2>
+    </div>
+
+    <!-- Horizontal timeline -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      <div class="scroll-up reveal-1">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, var(--teal-500), var(--purple-600)); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; margin-bottom: 24px;">1</div>
+        <h4>Discovery</h4>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Map data sources, systems, constraints.</p>
       </div>
-      <div class="cta-action">
-        <a href="contact.html" class="btn btn-primary">Schedule Your Data Audit</a>
+
+      <div class="scroll-up reveal-2">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, var(--purple-600), var(--amber-500)); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; margin-bottom: 24px;">2</div>
+        <h4>Strategy</h4>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Define roadmap and business outcomes.</p>
+      </div>
+
+      <div class="scroll-up reveal-3">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, var(--amber-500), var(--teal-500)); display: flex; align-items: center; justify-content: center; color: var(--navy-950); font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; margin-bottom: 24px;">3</div>
+        <h4>Build</h4>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Implement pipelines, models, dashboards.</p>
+      </div>
+
+      <div class="scroll-up reveal-4">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, var(--teal-500), var(--purple-600)); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; margin-bottom: 24px;">4</div>
+        <h4>Handoff</h4>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Train your team. You own it forever.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<!-- CTA — Large hero callout -->
+<section style="padding: 140px 0; position: relative; overflow: hidden;">
+  <div class="orb orb-1" style="width: 600px; height: 600px; top: -200px; right: -200px; opacity: 0.4;"></div>
+  <div class="container" style="position: relative; z-index: 1;">
+    <div class="scroll-up" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2 style="margin-bottom: 24px;">Ready to turn data into direction?</h2>
+      <p class="lead" style="margin-bottom: 40px;">Start with a 30-minute strategy session. No commitment. No fluff.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.05rem;">Schedule Your Call</button>
+        <button type="button" class="btn btn-secondary">Or explore services</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: var(--navy-950); color: white; padding: 80px 0 40px;">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about">
-        <div class="brand">
-          <span class="brand-mark">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
-          </span>
-          <span class="brand-name">DISHA</span>
-        </div>
-        <p>A senior AI consultancy helping growing companies turn raw data into clear, confident decisions.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 60px; margin-bottom: 60px;">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">DISHA</div>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">AI intelligence for enterprise scale.</p>
       </div>
       <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <p style="font-weight: 600; margin-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4);">Services</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Strategy</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Engineering</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Integration</a></li>
         </ul>
       </div>
       <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Data Strategy</a></li>
-          <li><a href="services.html">Data Engineering</a></li>
-          <li><a href="services.html">Analytics &amp; BI</a></li>
-          <li><a href="services.html">AI / ML</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="mailto:hello@dishaai.com">hello@dishaai.com</a></li>
-          <li><a href="contact.html">Schedule a Call</a></li>
+        <p style="font-weight: 600; margin-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4);">Company</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">About</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Contact</a></li>
+          <li><a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 DISHA Intelligence. All rights reserved.</span>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.25h4.56V23H.22V8.25zM8.27 8.25h4.37v2.01h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v8.1h-4.56v-7.18c0-1.71-.03-3.92-2.39-3.92-2.39 0-2.76 1.87-2.76 3.8v7.3H8.27V8.25z"/></svg></a>
-        <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M23 4.5c-.8.36-1.66.6-2.56.71a4.48 4.48 0 0 0 1.96-2.48 8.94 8.94 0 0 1-2.83 1.08 4.46 4.46 0 0 0-7.6 4.07A12.66 12.66 0 0 1 1.64 3.16a4.46 4.46 0 0 0 1.38 5.95 4.4 4.4 0 0 1-2.02-.56v.06a4.46 4.46 0 0 0 3.58 4.37 4.5 4.5 0 0 1-2.01.08 4.47 4.47 0 0 0 4.17 3.1A8.95 8.95 0 0 1 0 19.74a12.62 12.62 0 0 0 6.84 2c8.2 0 12.7-6.8 12.7-12.7 0-.2 0-.39-.01-.58A9.06 9.06 0 0 0 23 4.5z"/></svg></a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem;">© 2026 DISHA Intelligence. All rights reserved.</p>
+      <div style="display: flex; gap: 16px;">
+        <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">LinkedIn</a>
+        <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;">Twitter</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/scroll-animations.js"></script>
+<script>
+  // Animate stat counters on scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target.classList.contains('stat-counter')) {
+          const target = parseInt(entry.target.getAttribute('data-target'));
+          animateCounter(entry.target, target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.stat-counter').forEach(el => observer.observe(el));
+  });
+
+  function animateCounter(el, target) {
+    const start = 0;
+    const duration = 1800;
+    const startTime = Date.now();
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.floor(start + (target - start) * easeOutQuad(progress));
+      el.textContent = current;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  }
+
+  function easeOutQuad(t) {
+    return t * (2 - t);
+  }
+</script>
 </body>
 </html>
