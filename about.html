@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About — DISHA Intelligence</title>
 <meta name="description" content="Learn why DISHA was founded, the team's background, and the mission driving every data engagement." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+<link rel="apple-touch-icon" href="assets/favicon-256.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
@@ -15,7 +18,7 @@
 <header class="navbar">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg></span>
+      <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><polygon points="60,7 45.5,60 74.5,60" fill="#FFFFFF"/><polygon points="45.5,60 60,113 74.5,60" fill="#FFFFFF"/></svg></span>
       <span><span class="brand-name">DISHA</span><span class="brand-tag">AI Consultancy</span></span>
     </a>
     <nav class="nav-links">
@@ -68,7 +71,7 @@
   </div>
 </section>
 
-<!-- WHY WE STARTED -->
+<!-- WHY WE STARTED — Editorial numbered list, not another card row -->
 <section class="bg-alt">
   <div class="container">
     <div class="section-head center">
@@ -76,44 +79,51 @@
       <h2>Because "we'll pull a report" shouldn't take a week</h2>
       <p>Three patterns kept showing up everywhere we worked — so we built a firm specifically to solve them.</p>
     </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">⏱</div>
-        <h3>Slow answers, fast decisions</h3>
-        <p>Businesses move fast; their data teams often can't keep up. We close that gap with self-serve systems, not more middlemen.</p>
+    <div class="capability-list">
+      <div class="capability-item">
+        <div class="capability-num">01</div>
+        <div class="capability-body">
+          <h3>Slow answers, fast decisions</h3>
+          <p>Businesses move fast; their data teams often can't keep up. We close that gap with self-serve systems, not more middlemen.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🧩</div>
-        <h3>Tools without strategy</h3>
-        <p>We saw companies buy expensive BI platforms that sat half-used because no one defined what to measure first. Strategy comes before software.</p>
+      <div class="capability-item">
+        <div class="capability-num">02</div>
+        <div class="capability-body">
+          <h3>Tools without strategy</h3>
+          <p>We saw companies buy expensive BI platforms that sat half-used because no one defined what to measure first. Strategy comes before software.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🔒</div>
-        <h3>Vendor lock-in by design</h3>
-        <p>Too many consultancies build systems only they can maintain. We document and train so you own what we build, fully.</p>
+      <div class="capability-item">
+        <div class="capability-num">03</div>
+        <div class="capability-body">
+          <h3>Vendor lock-in by design</h3>
+          <p>Too many consultancies build systems only they can maintain. We document and train so you own what we build, fully.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MISSION / VISION -->
+<!-- MISSION / VISION — Asymmetric: featured statement + stacked companions -->
 <section>
   <div class="container">
-    <div class="value-grid" style="margin-top:0;">
-      <div class="card" style="background:var(--navy-900);">
-        <div class="card-icon" style="background:rgba(255,255,255,0.1);color:var(--teal-300);">🎯</div>
-        <h3 style="color:white;">Our Mission</h3>
-        <p style="color:rgba(255,255,255,0.65);">To give every growing company the data clarity normally reserved for enterprises with in-house data science teams.</p>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-label">Our Mission</div>
+        <p class="mission-statement">To give every growing company the data clarity normally reserved for enterprises with in-house data science teams.</p>
       </div>
-      <div class="card" style="background:linear-gradient(135deg,var(--indigo-500),#3d3ec9);">
-        <div class="card-icon" style="background:rgba(255,255,255,0.15);color:white;">🔭</div>
-        <h3 style="color:white;">Our Vision</h3>
-        <p style="color:rgba(255,255,255,0.8);">A world where no leadership team makes a major decision on data they don't fully trust.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>How We Work</h3>
-        <p>Senior-led, fixed-scope, transparent pricing, and full knowledge transfer — every single time.</p>
+      <div class="mission-side">
+        <div class="mission-side-item">
+          <div class="card-icon">🔭</div>
+          <h3>Our Vision</h3>
+          <p>A world where no leadership team makes a major decision on data they don't fully trust.</p>
+        </div>
+        <div class="mission-side-item">
+          <div class="card-icon">🤝</div>
+          <h3>How We Work</h3>
+          <p>Senior-led, fixed-scope, transparent pricing, and full knowledge transfer — every single time.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -162,7 +172,7 @@
     <div class="footer-grid">
       <div class="footer-about">
         <div class="brand">
-          <span class="brand-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg></span>
+          <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><polygon points="60,7 45.5,60 74.5,60" fill="#FFFFFF"/><polygon points="45.5,60 60,113 74.5,60" fill="#FFFFFF"/></svg></span>
           <span class="brand-name">DISHA</span>
         </div>
         <p>A senior AI consultancy helping growing companies turn raw data into clear, confident decisions.</p>

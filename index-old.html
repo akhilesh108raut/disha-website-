@@ -39,78 +39,102 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO — Asymmetric layout with visual depth -->
 <section class="hero">
   <div class="hero-grid-bg"></div>
+  <div class="hero-gradient"></div>
   <div class="container">
-    <div class="hero-content">
-      <h1>Direction. Intelligence. <span class="accent">Impact.</span></h1>
-      <p class="lead">DISHA Intelligence turns scattered, unreliable data into a clear strategic asset. We assess your data and stand up the cloud pipelines and dashboards to run on, layer in predictive models and governance as you scale, and can even put a natural-language chatbot on top so anyone on your team can just ask — no dashboard required. One partner, from raw data to AI-driven decisions.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">Schedule Your Data Audit</a>
-        <a href="services.html" class="btn btn-outline">Explore Services</a>
+    <div class="hero-layout">
+      <!-- Left: Text (larger, prominent) -->
+      <div class="hero-text">
+        <h1>Direction. Intelligence. <span class="accent">Impact.</span></h1>
+        <p class="lead">DISHA turns scattered data into clear strategic intelligence. We assess your data readiness, stand up production pipelines and dashboards, layer in predictive models and governance as you scale.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Start Your Transformation</a>
+          <a href="services.html" class="btn btn-outline">How It Works</a>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="num">40+</div>
-          <div class="label">Data systems modernized</div>
+
+      <!-- Right: Visual + floating cards -->
+      <div class="hero-visual">
+        <div class="hero-placeholder">
+          <div class="placeholder-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="8" y="8" width="48" height="48" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 32h32M32 16v32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <p>Data Architecture</p>
         </div>
-        <div>
-          <div class="num">3.2x</div>
-          <div class="label">Avg. reporting speed gain</div>
+
+        <!-- Floating stat cards -->
+        <div class="stat-float stat-float-1">
+          <div class="stat-value">40+</div>
+          <p>Systems modernized</p>
         </div>
-        <div>
-          <div class="num">98%</div>
-          <div class="label">Client retention rate</div>
+        <div class="stat-float stat-float-2">
+          <div class="stat-value">3.2x</div>
+          <p>Speed improvement</p>
+        </div>
+        <div class="stat-float stat-float-3">
+          <div class="stat-value">98%</div>
+          <p>Client retention</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE CARDS -->
-<section>
+<!-- SERVICE CARDS — Bento Grid with Visual Hierarchy -->
+<section class="services-section">
   <div class="container">
-    <div class="section-head center">
-      <div class="section-tag" style="justify-content:center;color:var(--indigo-500)">What We Do</div>
-      <h2>Five ways we turn data into direction</h2>
-      <p>From a single audit to a fully managed AI function, every engagement is built around one outcome: decisions get easier.</p>
-    </div>
-    <div class="grid-5">
-      <div class="card">
-        <div class="card-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12l4-4 4 4 6-7 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3>Data Strategy &amp; Audit</h3>
-        <p>A full diagnostic of your data stack, quality, and gaps — with a prioritized roadmap to fix what matters first.</p>
+    <div class="services-head">
+      <div>
+        <div class="section-tag">Capabilities</div>
+        <h2>Five pillars of AI excellence</h2>
       </div>
-      <div class="card">
+      <p>We deliver across the full spectrum — from strategic assessment to operational intelligence.</p>
+    </div>
+
+    <!-- Bento Grid: Mixed sizes for visual interest -->
+    <div class="bento-grid">
+      <!-- Large card: Strategy (featured) -->
+      <div class="card card-lg card-featured">
+        <div class="card-tag">Foundation</div>
+        <h3>Data Strategy &amp; Audit</h3>
+        <p>A complete diagnostic of your data stack, quality, and gaps — with a prioritized roadmap.</p>
+        <div class="card-cta">Start here →</div>
+      </div>
+
+      <!-- Medium cards -->
+      <div class="card card-md">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M17.5 14v7M14 17.5h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3>Data Engineering &amp; Pipelines</h3>
-        <p>Reliable pipelines that connect every source into one clean, governed warehouse — built to scale with you.</p>
+        <h4>Engineering &amp; Pipelines</h4>
+        <p>Production-grade infrastructure that scales.</p>
       </div>
-      <div class="card">
+
+      <div class="card card-md">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19V9M11 19V4M18 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Analytics &amp; BI Dashboards</h3>
-        <p>Self-serve dashboards your team actually opens — built around the metrics that drive real decisions.</p>
+        <h4>Analytics &amp; Dashboards</h4>
+        <p>Metrics that drive real decisions.</p>
       </div>
-      <div class="card">
+
+      <!-- Small cards -->
+      <div class="card card-sm">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3>AI &amp; ML Implementation</h3>
-        <p>From forecasting to intelligent automation — practical AI built on a foundation of trustworthy data.</p>
+        <h4>AI &amp; ML</h4>
+        <p>Predictive intelligence.</p>
       </div>
-      <div class="card">
+
+      <div class="card card-sm">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Data Chatbot</h3>
-        <p>Ask your data questions in plain English and get instant reports, predictions, and context back — no dashboard required.</p>
+        <h4>Data Chatbot</h4>
+        <p>Natural language intelligence.</p>
       </div>
     </div>
   </div>

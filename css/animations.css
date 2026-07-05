@@ -386,11 +386,43 @@ a, button, .interactive {
   transition: var(--transition-base);
 }
 
+/* ============ ENHANCED BUTTON ANIMATIONS ============ */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 32px rgba(94, 234, 212, 0.25) !important;
+}
+
+/* ============ LINK HOVER EFFECTS ============ */
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--teal-400);
+}
+
+/* ============ CARD ENHANCEMENTS ============ */
+
+.card, .outcome-card {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 /* ============ SCROLLBAR STYLING ============ */
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -398,11 +430,28 @@ a, button, .interactive {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-300);
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  background: rgba(94, 234, 212, 0.4);
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gray-400);
+  background: var(--teal-400);
+  box-shadow: 0 0 12px rgba(94, 234, 212, 0.3);
+}
+
+/* ============ FOCUS STATES ============ */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--teal-400);
+  outline-offset: 2px;
+}
+
+/* ============ SELECTION STYLING ============ */
+
+::selection {
+  background: var(--teal-400);
+  color: var(--navy-950);
+  font-weight: 600;
 }
