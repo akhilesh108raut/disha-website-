@@ -56,10 +56,33 @@
   }
   /* If no observer or reduced motion: markup already shows the final numbers. */
 
-  /* ---- Hero node graph: draw once on load ---- */
-  var graph = document.querySelector('.node-graph');
-  if (graph) {
-    requestAnimationFrame(function () { graph.classList.add('drawn'); });
+  /* ---- Hub graph: pause SVG motion for reduced-motion users ---- */
+  var graph = document.querySelector('.hub-graph');
+  if (graph && reduceMotion && typeof graph.pauseAnimations === 'function') {
+    graph.pauseAnimations();
+  }
+
+  /* ---- Live event feed: cycle through pipeline events ---- */
+  var liveBody = document.getElementById('live-body');
+  if (liveBody && !reduceMotion) {
+    var events = [
+      { title: 'New forecast published — +32% accuracy', src: 'via Forecasting model' },
+      { title: '6 sources synced to the warehouse', src: 'via Pipelines' },
+      { title: 'Pricing anomaly flagged for review', src: 'via Governance' },
+      { title: 'Weekly ops digest sent to leadership', src: 'via Dashboards' }
+    ];
+    var liveIndex = 0;
+    var titleEl = liveBody.querySelector('.live-title');
+    var srcEl = liveBody.querySelector('.live-src');
+    setInterval(function () {
+      liveBody.classList.add('out');
+      setTimeout(function () {
+        liveIndex = (liveIndex + 1) % events.length;
+        titleEl.textContent = events[liveIndex].title;
+        srcEl.textContent = events[liveIndex].src;
+        liveBody.classList.remove('out');
+      }, 300);
+    }, 3400);
   }
 
   /* ---- Subtle magnetic hover on the hero CTA ---- */
