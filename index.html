@@ -54,105 +54,108 @@
       </div>
 
       <div class="hero-visual">
-        <svg class="hub-graph" viewBox="0 0 620 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: eight scattered data sources feed into DISHA, one source of truth">
-          <!-- links (also used as motion paths for the pulses) -->
-          <path id="l1" class="link" d="M310 61 Q 324 138 310 212"/>
-          <path id="l2" class="link" d="M472 126 Q 420 156 357 231"/>
-          <path id="l3" class="link" d="M468 272 Q 436 258 372 272"/>
-          <path id="l4" class="link" d="M472 418 Q 420 388 357 313"/>
-          <path id="l5" class="link" d="M310 483 Q 296 410 310 334"/>
-          <path id="l6" class="link" d="M148 418 Q 200 388 263 313"/>
-          <path id="l7" class="link" d="M147 272 Q 190 286 248 272"/>
-          <path id="l8" class="link" d="M148 126 Q 200 156 263 231"/>
+        <svg class="hub-graph" viewBox="0 0 680 535" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: your scattered business systems consolidate into one warehouse, DISHA models and governs it, then powers a customer chat, an internal team chat, and a leadership view">
+          <!-- source-to-warehouse links -->
+          <path id="l1" class="link" d="M138 27 Q 190 27 230 267"/>
+          <path id="l2" class="link" d="M138 125 Q 190 125 230 267"/>
+          <path id="l3" class="link" d="M138 223 Q 195 223 230 250"/>
+          <path id="l4" class="link" d="M138 321 Q 195 321 230 284"/>
+          <path id="l5" class="link" d="M138 419 Q 190 419 230 267"/>
+          <path id="l6" class="link" d="M138 516 Q 190 516 230 267"/>
+          <!-- warehouse-to-hub -->
+          <path id="l7" class="link" d="M380 267 L 412 267"/>
+          <!-- hub-to-output links -->
+          <path id="l8" class="link" d="M528 267 Q 546 150 560 80"/>
+          <path id="l9" class="link" d="M528 267 L 560 267"/>
+          <path id="l10" class="link" d="M528 267 Q 546 384 560 454"/>
 
-          <!-- capability chips along the flows -->
-          <g class="chip">
-            <rect x="365" y="154" width="100" height="22" rx="2"/>
-            <text x="415" y="168" text-anchor="middle">FORECASTING</text>
-          </g>
-          <g class="chip">
-            <rect x="366" y="367" width="98" height="22" rx="2"/>
-            <text x="415" y="381" text-anchor="middle">DASHBOARDS</text>
-          </g>
-          <g class="chip">
-            <rect x="156" y="155" width="84" height="22" rx="2"/>
-            <text x="198" y="169" text-anchor="middle">PIPELINES</text>
-          </g>
-          <g class="chip">
-            <rect x="148" y="369" width="96" height="22" rx="2"/>
-            <text x="196" y="383" text-anchor="middle">GOVERNANCE</text>
-          </g>
-
-          <!-- source nodes -->
+          <!-- source nodes: generic business systems (swap for whatever your stack actually is) -->
           <g class="gnode bob-1">
-            <rect x="262" y="23" width="96" height="38" rx="2"/>
-            <circle class="node-dot" cx="276" cy="42" r="3"/>
-            <text x="288" y="46">CRM</text>
+            <rect x="6" y="8" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="27" r="3"/>
+            <text x="32" y="31">CRM</text>
           </g>
           <g class="gnode bob-2">
-            <rect x="424" y="93" width="136" height="38" rx="2"/>
-            <circle class="node-dot" cx="438" cy="112" r="3"/>
-            <text x="450" y="116">SUPPORT DESK</text>
+            <rect x="6" y="106" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="125" r="3"/>
+            <text x="32" y="129">ERP</text>
           </g>
           <g class="gnode bob-3">
-            <rect x="468" y="253" width="128" height="38" rx="2"/>
-            <circle class="node-dot" cx="482" cy="272" r="3"/>
-            <text x="494" y="276">ERP / BILLING</text>
+            <rect x="6" y="204" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="223" r="3"/>
+            <text x="32" y="227">SUPPORT DESK</text>
           </g>
           <g class="gnode bob-4">
-            <rect x="447" y="413" width="90" height="38" rx="2"/>
-            <circle class="node-dot" cx="461" cy="432" r="3"/>
-            <text x="473" y="436">POS</text>
+            <rect x="6" y="302" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="321" r="3"/>
+            <text x="32" y="325">PAYMENTS</text>
           </g>
           <g class="gnode bob-5">
-            <rect x="242" y="483" width="136" height="38" rx="2"/>
-            <circle class="node-dot" cx="256" cy="502" r="3"/>
-            <text x="268" y="506">SPREADSHEETS</text>
+            <rect x="6" y="400" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="419" r="3"/>
+            <text x="32" y="423">MARKETING</text>
           </g>
           <g class="gnode bob-6">
-            <rect x="67" y="413" width="122" height="38" rx="2"/>
-            <circle class="node-dot" cx="81" cy="432" r="3"/>
-            <text x="93" y="436">WAREHOUSE</text>
+            <rect x="6" y="497" width="132" height="38" rx="2"/>
+            <circle class="node-dot" cx="20" cy="516" r="3"/>
+            <text x="32" y="520">HR / PAYROLL</text>
           </g>
-          <g class="gnode bob-7">
-            <rect x="29" y="253" width="118" height="38" rx="2"/>
-            <circle class="node-dot" cx="43" cy="272" r="3"/>
-            <text x="55" y="276">MARKETING</text>
-          </g>
-          <g class="gnode bob-8">
-            <rect x="66" y="93" width="124" height="38" rx="2"/>
-            <circle class="node-dot" cx="80" cy="112" r="3"/>
-            <text x="92" y="116">HR / PAYROLL</text>
+          <!-- warehouse (consolidation stage — this is what "generic" means: your stack, not this list) -->
+          <g class="gnode stage-node bob-3">
+            <rect x="230" y="237" width="150" height="60" rx="2"/>
+            <text x="305" y="262" text-anchor="middle">UNIFIED</text>
+            <text x="305" y="278" text-anchor="middle">WAREHOUSE</text>
           </g>
 
-          <!-- traveling pulses -->
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.2s" begin="-0s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.2s" begin="-1.6s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.8s" begin="-0.5s" repeatCount="indefinite"><mpath href="#l2"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.4s" begin="-0.2s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.4s" begin="-1.4s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3s" begin="-1.1s" repeatCount="indefinite"><mpath href="#l4"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.4s" begin="-0.8s" repeatCount="indefinite"><mpath href="#l5"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.4s" begin="-2.5s" repeatCount="indefinite"><mpath href="#l5"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.9s" begin="-1.7s" repeatCount="indefinite"><mpath href="#l6"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.6s" begin="-0.3s" repeatCount="indefinite"><mpath href="#l7"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.6s" begin="-1.6s" repeatCount="indefinite"><mpath href="#l7"/></animateMotion></circle>
-          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.1s" begin="-2s" repeatCount="indefinite"><mpath href="#l8"/></animateMotion></circle>
+          <!-- traveling pulses: sources -> warehouse -->
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.4s" begin="-0s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.1s" begin="-1.3s" repeatCount="indefinite"><mpath href="#l2"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.6s" begin="-0.6s" repeatCount="indefinite"><mpath href="#l3"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.6s" begin="-1.9s" repeatCount="indefinite"><mpath href="#l4"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.2s" begin="-0.9s" repeatCount="indefinite"><mpath href="#l5"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="3.6s" begin="-2.2s" repeatCount="indefinite"><mpath href="#l6"/></animateMotion></circle>
+          <!-- pulses: warehouse -> hub -->
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="1.1s" begin="-0s" repeatCount="indefinite"><mpath href="#l7"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="1.1s" begin="-0.55s" repeatCount="indefinite"><mpath href="#l7"/></animateMotion></circle>
+          <!-- pulses: hub -> outputs -->
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.4s" begin="-0.4s" repeatCount="indefinite"><mpath href="#l8"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="2s" begin="-1s" repeatCount="indefinite"><mpath href="#l9"/></animateMotion></circle>
+          <circle class="pulse-dot" r="3.5"><animateMotion dur="2.4s" begin="-1.7s" repeatCount="indefinite"><mpath href="#l10"/></animateMotion></circle>
 
           <!-- hub -->
-          <circle class="ring" cx="310" cy="272" r="62"/>
-          <circle class="ring r2" cx="310" cy="272" r="62"/>
-          <circle class="hub-core" cx="310" cy="272" r="62"/>
-          <circle class="hub-inner" cx="310" cy="272" r="53"/>
-          <text class="hub-name" x="310" y="270" text-anchor="middle">DISHA</text>
-          <text class="hub-sub" x="310" y="290" text-anchor="middle">ONE SOURCE OF TRUTH</text>
+          <circle class="ring" cx="470" cy="267" r="58"/>
+          <circle class="ring r2" cx="470" cy="267" r="58"/>
+          <circle class="hub-core" cx="470" cy="267" r="58"/>
+          <circle class="hub-inner" cx="470" cy="267" r="49"/>
+          <text class="hub-name" x="470" y="265" text-anchor="middle">DISHA</text>
+          <text class="hub-sub" x="470" y="285" text-anchor="middle">MODELED &amp; GOVERNED</text>
+
+          <!-- outputs: differentiated by audience, not by industry — generic on purpose -->
+          <g class="gnode bob-4">
+            <rect x="560" y="51" width="118" height="58" rx="2"/>
+            <circle class="node-dot" cx="574" cy="70" r="3"/>
+            <text x="586" y="74">CUSTOMER CHAT</text>
+            <text class="node-caption" x="574" y="90">Customer-facing support</text>
+          </g>
+          <g class="gnode bob-1">
+            <rect x="560" y="238" width="118" height="58" rx="2"/>
+            <circle class="node-dot" cx="574" cy="257" r="3"/>
+            <text x="586" y="261">TEAM CHAT</text>
+            <text class="node-caption" x="574" y="277">Role-scoped by department</text>
+          </g>
+          <g class="gnode bob-6">
+            <rect x="560" y="425" width="118" height="58" rx="2"/>
+            <circle class="node-dot" cx="574" cy="444" r="3"/>
+            <text x="586" y="448">LEADERSHIP VIEW</text>
+            <text class="node-caption" x="574" y="464">Reporting &amp; analytics</text>
+          </g>
         </svg>
 
         <div class="live-feed" aria-live="polite">
           <p class="live-kicker"><span class="blink"></span>Real-time events</p>
           <div class="live-body" id="live-body">
-            <p class="live-title">New forecast published — +32% accuracy</p>
-            <p class="live-src">via Forecasting model</p>
+            <p class="live-title">6 systems synced to the warehouse</p>
+            <p class="live-src">via Unified Warehouse</p>
           </div>
         </div>
       </div>

@@ -66,10 +66,10 @@
   var liveBody = document.getElementById('live-body');
   if (liveBody && !reduceMotion) {
     var events = [
-      { title: 'New forecast published — +32% accuracy', src: 'via Forecasting model' },
-      { title: '6 sources synced to the warehouse', src: 'via Pipelines' },
-      { title: 'Pricing anomaly flagged for review', src: 'via Governance' },
-      { title: 'Weekly ops digest sent to leadership', src: 'via Dashboards' }
+      { title: '6 systems synced to the warehouse', src: 'via Unified Warehouse' },
+      { title: 'Customer question resolved instantly', src: 'via Customer Chat' },
+      { title: 'Policy question answered — role-scoped', src: 'via Team Chat' },
+      { title: 'Weekly digest generated for leadership', src: 'via Leadership View' }
     ];
     var liveIndex = 0;
     var titleEl = liveBody.querySelector('.live-title');
