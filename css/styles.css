@@ -163,10 +163,6 @@ section { padding: 96px 0; }
   margin: 0 auto;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand-mark {
-  width: 36px; height: 36px;
-  display: flex; align-items: center; justify-content: center;
-}
 .brand-name {
   font-family: var(--font-display);
   font-weight: 700;
@@ -174,6 +170,15 @@ section { padding: 96px 0; }
   color: var(--white);
   letter-spacing: 0.01em;
 }
+/* The compass glyph stands in for the "I" in DISHA, matching the source lockup */
+.brand-glyph {
+  display: inline-block;
+  width: 0.21em;
+  height: 0.74em;
+  vertical-align: baseline;
+  margin: 0 0.02em;
+}
+.brand-glyph svg { display: block; width: 100%; height: 100%; }
 .brand-tag {
   display: block;
   font-family: var(--font-body);
