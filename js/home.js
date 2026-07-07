@@ -56,33 +56,65 @@
   }
   /* If no observer or reduced motion: markup already shows the final numbers. */
 
-  /* ---- Hub graph: pause SVG motion for reduced-motion users ---- */
-  var graph = document.querySelector('.hub-graph');
-  if (graph && reduceMotion && typeof graph.pauseAnimations === 'function') {
-    graph.pauseAnimations();
+  /* ---- Architecture connectors: pause SVG motion for reduced-motion users ---- */
+  if (reduceMotion) {
+    document.querySelectorAll('.arch svg').forEach(function (svg) {
+      if (typeof svg.pauseAnimations === 'function') svg.pauseAnimations();
+    });
   }
 
-  /* ---- Live event feed: cycle through pipeline events ---- */
-  var liveBody = document.getElementById('live-body');
-  if (liveBody && !reduceMotion) {
-    var events = [
-      { title: '6 systems synced to the warehouse', src: 'via Unified Warehouse' },
-      { title: 'Customer question resolved instantly', src: 'via Customer Chat' },
-      { title: 'Policy question answered — role-scoped', src: 'via Team Chat' },
-      { title: 'Weekly digest generated for leadership', src: 'via Leadership View' }
+  /* ---- Live activity feed: prepend new platform events ---- */
+  var activityList = document.getElementById('activity-list');
+  if (activityList && !reduceMotion) {
+    var eventPool = [
+      { text: 'Shipment #4812 delayed — alternate route suggested', tag: 'Ops', cls: 'warn' },
+      { text: 'Invoice anomaly flagged for review', tag: 'Finance', cls: 'danger' },
+      { text: 'Customer refund resolved in chat', tag: 'Support', cls: 'success' },
+      { text: 'Demand forecast refreshed for Q3', tag: 'AI', cls: 'info' },
+      { text: 'New lead auto-assigned to sales', tag: 'CRM', cls: 'success' },
+      { text: 'Nightly ETL completed — 42 systems synced', tag: 'Platform', cls: 'info' },
+      { text: 'Stock-out risk detected for SKU 2218', tag: 'AI', cls: 'warn' },
+      { text: 'Weekly KPI digest sent to leadership', tag: 'Reports', cls: 'success' }
     ];
-    var liveIndex = 0;
-    var titleEl = liveBody.querySelector('.live-title');
-    var srcEl = liveBody.querySelector('.live-src');
+    var poolIndex = 0;
+
+    function clockNow() {
+      var d = new Date();
+      return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
+    }
+
     setInterval(function () {
-      liveBody.classList.add('out');
-      setTimeout(function () {
-        liveIndex = (liveIndex + 1) % events.length;
-        titleEl.textContent = events[liveIndex].title;
-        srcEl.textContent = events[liveIndex].src;
-        liveBody.classList.remove('out');
-      }, 300);
-    }, 3400);
+      var evt = eventPool[poolIndex];
+      poolIndex = (poolIndex + 1) % eventPool.length;
+
+      var li = document.createElement('li');
+      li.className = 'evt evt-' + evt.cls + ' enter';
+
+      var time = document.createElement('span');
+      time.className = 'evt-time';
+      time.textContent = clockNow();
+
+      var text = document.createElement('span');
+      text.className = 'evt-text';
+      text.textContent = evt.text;
+
+      var tag = document.createElement('span');
+      tag.className = 'evt-tag';
+      tag.textContent = evt.tag;
+
+      li.appendChild(time);
+      li.appendChild(text);
+      li.appendChild(tag);
+      activityList.insertBefore(li, activityList.firstChild);
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { li.classList.remove('enter'); });
+      });
+
+      while (activityList.children.length > 6) {
+        activityList.removeChild(activityList.lastChild);
+      }
+    }, 3600);
   }
 
   /* ---- Subtle magnetic hover on the hero CTA ---- */
