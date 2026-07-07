@@ -12,6 +12,44 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
+  // Service capability accordion: one open at a time
+  var capItems = Array.prototype.slice.call(document.querySelectorAll('.cap-item'));
+  if (capItems.length) {
+    var closeCapItem = function (item) {
+      var btn = item.querySelector('.cap-summary');
+      var panel = item.querySelector('.cap-panel');
+      btn.setAttribute('aria-expanded', 'false');
+      panel.style.maxHeight = null;
+      item.classList.remove('open');
+    };
+    var openCapItem = function (item) {
+      var btn = item.querySelector('.cap-summary');
+      var panel = item.querySelector('.cap-panel');
+      btn.setAttribute('aria-expanded', 'true');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      item.classList.add('open');
+    };
+    capItems.forEach(function (item) {
+      item.querySelector('.cap-summary').addEventListener('click', function () {
+        var wasOpen = item.classList.contains('open');
+        capItems.forEach(closeCapItem);
+        if (!wasOpen) openCapItem(item);
+      });
+    });
+    var capResizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(capResizeTimer);
+      capResizeTimer = setTimeout(function () {
+        var openItem = document.querySelector('.cap-item.open');
+        if (openItem) {
+          var panel = openItem.querySelector('.cap-panel');
+          panel.style.maxHeight = 'none';
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      }, 120);
+    });
+  }
+
   // Contact form validation
   const form = document.getElementById('contact-form');
   if (form) {

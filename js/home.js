@@ -108,13 +108,13 @@
   var activityList = document.getElementById('activity-list');
   if (activityList && !reduceMotion) {
     var eventPool = [
-      { text: 'Shipment #4812 delayed — alternate route suggested', tag: 'Ops', cls: 'warn' },
+      { text: 'Process bottleneck flagged — next-best-action suggested', tag: 'Ops', cls: 'warn' },
       { text: 'Invoice anomaly flagged for review', tag: 'Finance', cls: 'danger' },
-      { text: 'Customer refund resolved in chat', tag: 'Support', cls: 'success' },
+      { text: 'Customer inquiry resolved in chat', tag: 'Support', cls: 'success' },
       { text: 'Demand forecast refreshed for Q3', tag: 'AI', cls: 'info' },
       { text: 'New lead auto-assigned to sales', tag: 'CRM', cls: 'success' },
       { text: 'Nightly ETL completed — 42 systems synced', tag: 'Platform', cls: 'info' },
-      { text: 'Stock-out risk detected for SKU 2218', tag: 'AI', cls: 'warn' },
+      { text: 'Anomaly detected in weekly throughput', tag: 'AI', cls: 'warn' },
       { text: 'Weekly KPI digest sent to leadership', tag: 'Reports', cls: 'success' }
     ];
     var poolIndex = 0;

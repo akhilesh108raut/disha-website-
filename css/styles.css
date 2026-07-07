@@ -911,14 +911,172 @@ section { padding: 96px 0; }
 }
 .capability-body h3 { margin-bottom: 12px; }
 .capability-body p { font-size: 0.98rem; }
+
+/* ---------- Service accordion (Services page) ---------- */
+.capability-index { border-top: 1px solid var(--ink-300); }
+.cap-item { border-bottom: 1px solid var(--ink-300); }
+
+.cap-summary {
+  display: grid;
+  grid-template-columns: 86px minmax(230px, 1.1fr) 1.4fr 40px;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  padding: 28px 8px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  transition: background 0.18s ease-out, padding-left 0.18s ease-out;
+}
+.cap-summary:hover { background: var(--ink-100); padding-left: 16px; }
+
+.cap-no {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink-500);
+  transition: color 0.18s ease-out;
+}
+.cap-summary:hover .cap-no,
+.cap-item.open .cap-no { color: var(--indigo-500); }
+
+.cap-titlewrap { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.cap-title {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+}
+.cap-desc { font-size: 0.96rem; color: var(--ink-700); line-height: 1.5; }
+
+.cap-chev {
+  color: var(--ink-500);
+  justify-self: end;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), color 0.18s ease-out;
+}
+.cap-summary:hover .cap-chev { color: var(--indigo-500); }
+.cap-item.open .cap-chev { transform: rotate(180deg); color: var(--indigo-500); }
+
+.cap-panel { overflow: hidden; }
+.cap-panel { max-height: 0; transition: max-height 0.36s cubic-bezier(0.4, 0, 0.2, 1); }
+.cap-panel-inner {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  padding: 4px 8px 40px 114px;
+}
+
+.cap-eyebrow {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 16px;
+}
+.cap-list { display: flex; flex-direction: column; gap: 11px; }
+.cap-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.98rem;
+  color: var(--ink-900);
+  line-height: 1.4;
+}
+.cap-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 13px; height: 8px;
+  border-left: 1.5px solid var(--indigo-500);
+  border-bottom: 1.5px solid var(--indigo-500);
+  transform: rotate(-45deg);
+}
+
+.cap-facts { display: flex; flex-direction: column; }
+.cap-fact { padding: 12px 0; border-top: 1px solid var(--ink-300); }
+.cap-fact:first-child { border-top: none; padding-top: 0; }
+.cap-fact-label {
+  display: block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 4px;
+}
+.cap-fact-val { font-size: 0.94rem; color: var(--ink-700); line-height: 1.45; }
+
+.cap-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 11px 20px;
+  background: var(--ink-900);
+  color: var(--white);
+  border-radius: 2px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.15s ease-out;
+}
+.cap-cta span { transition: transform 0.15s ease-out; }
+.cap-cta:hover { background: var(--indigo-500); }
+.cap-cta:hover span { transform: translateX(4px); }
+
+@media (max-width: 960px) {
+  .cap-summary { grid-template-columns: 56px 1fr 32px; gap: 18px; align-items: start; }
+  .cap-titlewrap { grid-column: 2; }
+  .cap-desc { grid-column: 2; grid-row: 2; margin-top: 6px; }
+  .cap-no { padding-top: 3px; }
+  .cap-chev { grid-column: 3; grid-row: 1; align-self: start; margin-top: 4px; }
+  .cap-panel-inner { grid-template-columns: 1fr; gap: 28px; padding: 4px 8px 34px 74px; }
+}
+
+@media (max-width: 620px) {
+  .cap-summary { grid-template-columns: 40px 1fr 28px; gap: 14px; padding: 22px 4px; }
+  .cap-summary:hover { padding-left: 4px; }
+  .cap-title { font-size: 1.2rem; }
+  .cap-panel-inner { padding: 2px 4px 30px 54px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cap-panel, .cap-chev, .cap-summary { transition: none; }
+}
 @media (max-width: 620px) {
   .capability-item { grid-template-columns: 1fr; gap: 10px; }
   .capability-num { font-size: 1.6rem; }
 }
 
 /* ---------- Pricing (Services page) ---------- */
-.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; align-items: stretch; }
-@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
+@media (max-width: 1080px) { .pricing-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; } }
+
+.addon-strip {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 28px;
+  border: 1px dashed var(--ink-300);
+  border-radius: var(--radius-lg);
+}
+.addon-strip .addon-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo-500);
+  margin-bottom: 6px;
+}
+.addon-strip h4 { font-size: 1.1rem; margin-bottom: 4px; }
+.addon-strip p { font-size: 0.92rem; color: var(--ink-500); max-width: 46em; }
+.addon-strip .btn { flex: none; }
 
 .price-card {
   background: var(--white);
@@ -964,7 +1122,12 @@ section { padding: 96px 0; }
   border-bottom: 1px dashed rgba(11,15,31,0.12);
 }
 .price-card.featured .price-meta { color: rgba(255,255,255,0.55); border-color: rgba(255,255,255,0.15); }
+.price-meta + .price-meta { border-top: none; margin-top: 0; padding-top: 0; }
+.price-meta span:first-child { flex: none; font-weight: 600; }
+.price-meta span:last-child { text-align: right; }
 .price-card .btn { margin-top: auto; margin-top: 24px; }
+.price-goal { font-size: 0.86rem; color: var(--ink-700); margin-bottom: 18px; padding-left: 14px; border-left: 2px solid var(--indigo-500); }
+.price-card.featured .price-goal { color: rgba(255,255,255,0.75); border-left-color: var(--teal-300); }
 
 /* ---------- Timeline ---------- */
 .timeline { display: flex; flex-direction: column; gap: 0; max-width: 760px; margin: 0 auto; }
