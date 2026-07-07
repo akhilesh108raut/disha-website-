@@ -149,10 +149,10 @@ section { padding: 96px 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(23, 23, 18, 0.92);
+  background: rgba(250, 248, 243, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--ink-300);
 }
 .nav-inner {
   display: flex;
@@ -167,7 +167,7 @@ section { padding: 96px 0; }
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.3rem;
-  color: var(--white);
+  color: var(--ink-900);
   letter-spacing: 0.01em;
 }
 /* The compass glyph stands in for the "I" in DISHA, matching the source lockup */
@@ -179,17 +179,18 @@ section { padding: 96px 0; }
   margin: 0 0.02em;
 }
 .brand-glyph svg { display: block; width: 100%; height: 100%; }
-/* Needle: red + white — navbar/footer are always dark on these pages */
+/* Needle: red north always; south/dot follow the ink token so it reads
+   red + ink on the light header/footer, and red + white in dark mode */
 .brand-glyph .gn { fill: #E23B2E; }
-.brand-glyph .gs { fill: rgba(255, 255, 255, 0.92); }
-.brand-glyph .gc { fill: var(--navy-900); }
-.brand-glyph .gd { fill: #FFFFFF; }
+.brand-glyph .gs { fill: var(--ink-900); }
+.brand-glyph .gc { fill: var(--bg-light); }
+.brand-glyph .gd { fill: var(--ink-900); }
 .brand-tag {
   display: block;
   font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 500;
-  color: var(--teal-300);
+  color: var(--ink-500);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: -2px;
@@ -201,15 +202,15 @@ section { padding: 96px 0; }
   gap: 36px;
 }
 .nav-links a {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--ink-700);
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.15s ease;
   position: relative;
   padding: 4px 0;
 }
-.nav-links a:hover { color: var(--white); }
-.nav-links a.active { color: var(--white); }
+.nav-links a:hover { color: var(--ink-900); }
+.nav-links a.active { color: var(--ink-900); }
 .nav-links a.active::after {
   content: '';
   position: absolute;
@@ -229,7 +230,7 @@ section { padding: 96px 0; }
   cursor: pointer;
   padding: 6px;
 }
-.nav-toggle span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--ink-900); border-radius: 2px; }
 
 @media (max-width: 920px) {
   .nav-links {
@@ -238,17 +239,17 @@ section { padding: 96px 0; }
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: var(--navy-800);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--ink-300);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
   .nav-links.open { max-height: 420px; }
-  .nav-links a { width: 100%; padding: 16px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .nav-links a { width: 100%; padding: 16px 24px; border-top: 1px solid var(--ink-300); }
   .nav-links a.active::after { display: none; }
-  .nav-links a.active { background: rgba(255,255,255,0.04); }
-  .nav-cta .btn-outline { display: none; }
+  .nav-links a.active { background: var(--ink-100); }
+  .nav-cta .btn-outline-dark { display: none; }
   .nav-toggle { display: flex; }
 }
 
@@ -465,15 +466,14 @@ section { padding: 96px 0; }
 
 /* ---------- Page header (inner pages) ---------- */
 .page-header {
-  background: radial-gradient(ellipse 70% 80% at 80% 0%, rgba(180, 83, 10, 0.3), transparent),
-              linear-gradient(180deg, var(--navy-900), var(--navy-800));
-  color: var(--white);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--ink-300);
   padding: 80px 0 70px;
   text-align: center;
 }
-.page-header .section-tag { justify-content: center; color: var(--teal-300); }
-.page-header h1 { color: var(--white); margin-bottom: 16px; }
-.page-header p { color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.08rem; }
+.page-header .section-tag { justify-content: center; color: var(--indigo-500); }
+.page-header h1 { color: var(--ink-900); margin-bottom: 16px; }
+.page-header p { color: var(--ink-700); max-width: 600px; margin: 0 auto; font-size: 1.08rem; }
 
 /* ---------- Bento Grid: Services Cards ---------- */
 .bento-grid {
@@ -847,8 +847,8 @@ section { padding: 96px 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--navy-900);
-  color: rgba(255,255,255,0.6);
+  background: var(--bg-light);
+  color: var(--ink-500);
   padding: 64px 0 28px;
 }
 .footer-grid {
@@ -856,13 +856,13 @@ section { padding: 96px 0; }
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 40px;
   padding-bottom: 44px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--ink-300);
 }
-.footer-grid h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 18px; }
+.footer-grid h4 { color: var(--ink-900); font-size: 0.95rem; margin-bottom: 18px; }
 .footer-grid ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-.footer-grid a { color: rgba(255,255,255,0.6); font-size: 0.92rem; transition: color 0.15s; }
-.footer-grid a:hover { color: var(--teal-300); }
-.footer-about p { color: rgba(255,255,255,0.55); font-size: 0.92rem; max-width: 280px; margin-top: 14px; }
+.footer-grid a { color: var(--ink-500); font-size: 0.92rem; transition: color 0.15s; }
+.footer-grid a:hover { color: var(--indigo-500); }
+.footer-about p { color: var(--ink-500); font-size: 0.92rem; max-width: 280px; margin-top: 14px; }
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -876,11 +876,13 @@ section { padding: 96px 0; }
 .footer-social a {
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.06);
+  background: var(--ink-100);
   display: flex; align-items: center; justify-content: center;
   transition: background 0.15s;
 }
 .footer-social a:hover { background: var(--indigo-500); }
+.footer-social a svg { fill: var(--ink-700); transition: fill 0.15s; }
+.footer-social a:hover svg { fill: var(--white); }
 @media (max-width: 880px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
