@@ -492,37 +492,57 @@ section[id] { scroll-margin-top: 90px; }
 .section-head p { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; }
 
 /* ---------- Capability index (ruled rows) ---------- */
+/* Capability accordion — scannable index + progressive disclosure */
 .capability-index { border-top: 1px solid var(--hairline); }
-.cap-row {
+.cap-item { border-bottom: 1px solid var(--hairline); }
+
+.cap-summary {
   display: grid;
-  grid-template-columns: 86px 1.1fr 1.4fr 40px;
+  grid-template-columns: 86px minmax(230px, 1.1fr) 1.4fr 40px;
   align-items: center;
   gap: 28px;
-  padding: 30px 8px;
-  border-bottom: 1px solid var(--hairline);
-  transition: background 0.15s ease-out;
-  position: relative;
+  width: 100%;
+  padding: 28px 8px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  transition: background 0.18s ease-out, padding-left 0.18s ease-out;
 }
-.cap-row:hover { background: var(--paper-deep); }
+.cap-summary:hover { background: var(--paper-deep); padding-left: 16px; }
+
 .cap-no {
   font-family: var(--font-display);
   font-size: 1.05rem;
   color: var(--ink-mute);
+  transition: color 0.18s ease-out;
 }
-.cap-row h3 { font-size: 1.45rem; font-weight: 600; }
-.cap-row .cap-desc { font-size: 0.96rem; color: var(--ink-soft); }
-.cap-arrow {
+.cap-summary:hover .cap-no,
+.cap-item.open .cap-no { color: var(--accent); }
+
+.cap-titlewrap { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.cap-title {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.cap-desc { font-size: 0.96rem; color: var(--ink-soft); line-height: 1.5; }
+
+.cap-chev {
   color: var(--ink-mute);
-  font-size: 1.2rem;
-  transition: transform 0.15s ease-out, color 0.15s ease-out;
   justify-self: end;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), color 0.18s ease-out;
 }
-.cap-row:hover .cap-arrow { transform: translateX(5px); color: var(--accent); }
+.cap-summary:hover .cap-chev { color: var(--accent); }
+.cap-item.open .cap-chev { transform: rotate(180deg); color: var(--accent); }
+
 .cap-start-tag {
-  display: inline-block;
-  margin-left: 12px;
   font-family: var(--font-body);
-  font-size: 0.64rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -530,8 +550,77 @@ section[id] { scroll-margin-top: 90px; }
   border: 1px solid var(--accent);
   border-radius: 2px;
   padding: 3px 8px;
-  vertical-align: middle;
+  white-space: nowrap;
 }
+
+/* Expandable detail panel */
+.cap-panel { overflow: hidden; }
+.js .cap-panel { max-height: 0; transition: max-height 0.36s cubic-bezier(0.4, 0, 0.2, 1); }
+.cap-panel-inner {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  padding: 4px 8px 40px 114px;
+}
+
+.cap-eyebrow {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 16px;
+}
+.cap-list { display: flex; flex-direction: column; gap: 11px; }
+.cap-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.98rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.cap-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 13px; height: 8px;
+  border-left: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  transform: rotate(-45deg);
+}
+
+.cap-facts { display: flex; flex-direction: column; }
+.cap-fact { padding: 12px 0; border-top: 1px solid var(--hairline); }
+.cap-fact:first-child { border-top: none; padding-top: 0; }
+.cap-fact-label {
+  display: block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 4px;
+}
+.cap-fact-val { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.45; }
+
+.cap-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 11px 20px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 2px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.15s ease-out;
+}
+.cap-cta span { transition: transform 0.15s ease-out; }
+.cap-cta:hover { background: var(--accent); }
+.cap-cta:hover span { transform: translateX(4px); }
+
 .index-foot {
   display: flex;
   justify-content: space-between;
@@ -694,14 +783,17 @@ section[id] { scroll-margin-top: 90px; }
   .ai-pulse { opacity: 0.2; transform: scale(1.15); }
   .flow-line { opacity: 0.75; }
   .evt { transition: none; }
+  .cap-panel, .cap-chev, .cap-summary { transition: none; }
 }
 
 /* ---------- Focus visibility (WCAG) ---------- */
-a:focus-visible, .btn:focus-visible, button:focus-visible {
+a:focus-visible, .btn:focus-visible, button:focus-visible,
+.cap-summary:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 3px;
+  outline-offset: -2px;
   border-radius: 2px;
 }
+.cap-cta:focus-visible { outline-offset: 3px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
@@ -723,12 +815,20 @@ a:focus-visible, .btn:focus-visible, button:focus-visible {
   .results-grid { grid-template-columns: 1fr; }
   .process-line { grid-template-columns: 1fr 1fr; row-gap: 44px; }
   .process-line::before { display: none; }
+  /* Capability summary: title + desc stack in the same column */
+  .cap-summary { grid-template-columns: 56px 1fr 32px; gap: 18px; align-items: start; }
+  .cap-titlewrap { grid-column: 2; }
+  .cap-desc { grid-column: 2; grid-row: 2; margin-top: 6px; }
+  .cap-no { padding-top: 3px; }
+  .cap-chev { grid-column: 3; grid-row: 1; align-self: start; margin-top: 4px; }
+  .cap-panel-inner { grid-template-columns: 1fr; gap: 28px; padding: 4px 8px 34px 74px; }
 }
 
 @media (max-width: 620px) {
-  .cap-row { grid-template-columns: 48px 1fr 32px; }
-  .cap-row .cap-desc { grid-column: 2 / 3; grid-row: 2; margin-top: 6px; }
-  .cap-row .cap-arrow { grid-row: 1; }
+  .cap-summary { grid-template-columns: 40px 1fr 28px; gap: 14px; padding: 22px 4px; }
+  .cap-summary:hover { padding-left: 4px; }
+  .cap-title { font-size: 1.2rem; }
+  .cap-panel-inner { padding: 2px 4px 30px 54px; }
   .process-line { grid-template-columns: 1fr; }
   .header-inner .btn { padding: 11px 16px; font-size: 0.84rem; }
   /* AI hub: orbit chips become a wrapped row under the core */

@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/editorial.css?v=20260707" />
+<link rel="stylesheet" href="css/editorial.css?v=20260707b" />
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -235,37 +235,164 @@
       <p>Every engagement starts with strategy. The rest we build in the order your data actually needs.</p>
     </div>
 
-    <div class="capability-index">
-      <a href="services.html" class="cap-row" data-reveal>
-        <span class="cap-no">01</span>
-        <h3>Data Strategy &amp; Audit<span class="cap-start-tag">Start here</span></h3>
-        <p class="cap-desc">A complete diagnostic of your stack, quality, and gaps — with a prioritized 90-day roadmap.</p>
-        <span class="cap-arrow">&rarr;</span>
-      </a>
-      <a href="services.html" class="cap-row" data-reveal>
-        <span class="cap-no">02</span>
-        <h3>Data Engineering &amp; Pipelines</h3>
-        <p class="cap-desc">Production-grade infrastructure that scales — pipelines your team can run without us.</p>
-        <span class="cap-arrow">&rarr;</span>
-      </a>
-      <a href="services.html" class="cap-row" data-reveal>
-        <span class="cap-no">03</span>
-        <h3>Analytics &amp; Dashboards</h3>
-        <p class="cap-desc">Self-explanatory metrics that drive real decisions — no manual required.</p>
-        <span class="cap-arrow">&rarr;</span>
-      </a>
-      <a href="services.html" class="cap-row" data-reveal>
-        <span class="cap-no">04</span>
-        <h3>AI &amp; Machine Learning</h3>
-        <p class="cap-desc">Forecasting and predictive models deployed with governance and monitoring built in.</p>
-        <span class="cap-arrow">&rarr;</span>
-      </a>
-      <a href="services.html" class="cap-row" data-reveal>
-        <span class="cap-no">05</span>
-        <h3>Conversational Data</h3>
-        <p class="cap-desc">Ask your data questions in plain language — chat interfaces over your own warehouse.</p>
-        <span class="cap-arrow">&rarr;</span>
-      </a>
+    <div class="capability-index" data-reveal>
+
+      <!-- 01 -->
+      <div class="cap-item">
+        <button class="cap-summary" id="capbtn-1" aria-expanded="false" aria-controls="cappanel-1">
+          <span class="cap-no">01</span>
+          <span class="cap-titlewrap">
+            <span class="cap-title">Data Strategy &amp; Audit</span>
+            <span class="cap-start-tag">Start here</span>
+          </span>
+          <span class="cap-desc">A complete diagnostic of your stack, quality, and gaps — with a prioritized 90-day roadmap.</span>
+          <svg class="cap-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="cap-panel" id="cappanel-1" role="region" aria-labelledby="capbtn-1">
+          <div class="cap-panel-inner">
+            <div class="cap-deliver">
+              <p class="cap-eyebrow">Key deliverables</p>
+              <ul class="cap-list">
+                <li>Data maturity scorecard</li>
+                <li>System &amp; pipeline inventory</li>
+                <li>Gap &amp; risk assessment</li>
+                <li>Prioritized 90-day roadmap</li>
+              </ul>
+            </div>
+            <div class="cap-facts">
+              <div class="cap-fact"><span class="cap-fact-label">Outcome</span><span class="cap-fact-val">Know exactly what to fix first — and what it's worth.</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Timeline</span><span class="cap-fact-val">2–4 weeks</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Best for</span><span class="cap-fact-val">Teams unsure where their data problems actually are.</span></div>
+              <a href="services.html" class="cap-cta">Explore service <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="cap-item">
+        <button class="cap-summary" id="capbtn-2" aria-expanded="false" aria-controls="cappanel-2">
+          <span class="cap-no">02</span>
+          <span class="cap-titlewrap">
+            <span class="cap-title">Data Engineering &amp; Pipelines</span>
+          </span>
+          <span class="cap-desc">Production-grade infrastructure that scales — pipelines your team can run without us.</span>
+          <svg class="cap-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="cap-panel" id="cappanel-2" role="region" aria-labelledby="capbtn-2">
+          <div class="cap-panel-inner">
+            <div class="cap-deliver">
+              <p class="cap-eyebrow">Key deliverables</p>
+              <ul class="cap-list">
+                <li>Unified data warehouse</li>
+                <li>Automated ingestion pipelines</li>
+                <li>Data-quality monitoring &amp; alerts</li>
+                <li>Full documentation &amp; handover</li>
+              </ul>
+            </div>
+            <div class="cap-facts">
+              <div class="cap-fact"><span class="cap-fact-label">Outcome</span><span class="cap-fact-val">One source of truth your whole team trusts.</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Timeline</span><span class="cap-fact-val">6–12 weeks</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Best for</span><span class="cap-fact-val">Companies with data scattered across many systems.</span></div>
+              <a href="services.html" class="cap-cta">Explore service <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="cap-item">
+        <button class="cap-summary" id="capbtn-3" aria-expanded="false" aria-controls="cappanel-3">
+          <span class="cap-no">03</span>
+          <span class="cap-titlewrap">
+            <span class="cap-title">Analytics &amp; Dashboards</span>
+          </span>
+          <span class="cap-desc">Self-explanatory metrics that drive real decisions — no manual required.</span>
+          <svg class="cap-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="cap-panel" id="cappanel-3" role="region" aria-labelledby="capbtn-3">
+          <div class="cap-panel-inner">
+            <div class="cap-deliver">
+              <p class="cap-eyebrow">Key deliverables</p>
+              <ul class="cap-list">
+                <li>Executive &amp; team dashboards</li>
+                <li>Self-serve reporting</li>
+                <li>Automated alerts on the metrics that matter</li>
+                <li>Governed metric definitions</li>
+              </ul>
+            </div>
+            <div class="cap-facts">
+              <div class="cap-fact"><span class="cap-fact-label">Outcome</span><span class="cap-fact-val">Decisions in minutes, not week-long report requests.</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Timeline</span><span class="cap-fact-val">3–6 weeks</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Best for</span><span class="cap-fact-val">Leaders waiting days for numbers they should see live.</span></div>
+              <a href="services.html" class="cap-cta">Explore service <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="cap-item">
+        <button class="cap-summary" id="capbtn-4" aria-expanded="false" aria-controls="cappanel-4">
+          <span class="cap-no">04</span>
+          <span class="cap-titlewrap">
+            <span class="cap-title">AI &amp; Machine Learning</span>
+          </span>
+          <span class="cap-desc">Forecasting and predictive models deployed with governance and monitoring built in.</span>
+          <svg class="cap-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="cap-panel" id="cappanel-4" role="region" aria-labelledby="capbtn-4">
+          <div class="cap-panel-inner">
+            <div class="cap-deliver">
+              <p class="cap-eyebrow">Key deliverables</p>
+              <ul class="cap-list">
+                <li>Custom forecasting &amp; prediction models</li>
+                <li>Rigorous model validation &amp; testing</li>
+                <li>Production deployment</li>
+                <li>Monitoring &amp; drift detection</li>
+              </ul>
+            </div>
+            <div class="cap-facts">
+              <div class="cap-fact"><span class="cap-fact-label">Outcome</span><span class="cap-fact-val">Predict what's coming instead of reacting to it.</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Timeline</span><span class="cap-fact-val">8–14 weeks</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Best for</span><span class="cap-fact-val">Teams ready to move from dashboards to prediction.</span></div>
+              <a href="services.html" class="cap-cta">Explore service <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="cap-item">
+        <button class="cap-summary" id="capbtn-5" aria-expanded="false" aria-controls="cappanel-5">
+          <span class="cap-no">05</span>
+          <span class="cap-titlewrap">
+            <span class="cap-title">Conversational Data</span>
+          </span>
+          <span class="cap-desc">Ask your data questions in plain language — chat interfaces over your own warehouse.</span>
+          <svg class="cap-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="cap-panel" id="cappanel-5" role="region" aria-labelledby="capbtn-5">
+          <div class="cap-panel-inner">
+            <div class="cap-deliver">
+              <p class="cap-eyebrow">Key deliverables</p>
+              <ul class="cap-list">
+                <li>Natural-language query interface</li>
+                <li>Role-scoped access &amp; governance</li>
+                <li>RAG over your own documents</li>
+                <li>Slack / Teams integration</li>
+              </ul>
+            </div>
+            <div class="cap-facts">
+              <div class="cap-fact"><span class="cap-fact-label">Outcome</span><span class="cap-fact-val">Anyone gets answers — without knowing SQL.</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Timeline</span><span class="cap-fact-val">4–8 weeks</span></div>
+              <div class="cap-fact"><span class="cap-fact-label">Best for</span><span class="cap-fact-val">Organizations where only a few people can query data.</span></div>
+              <a href="services.html" class="cap-cta">Explore service <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="index-foot" data-reveal>
@@ -411,6 +538,6 @@
   </div>
 </footer>
 
-<script src="js/home.js?v=20260707"></script>
+<script src="js/home.js?v=20260707b"></script>
 </body>
 </html>

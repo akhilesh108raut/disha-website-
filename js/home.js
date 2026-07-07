@@ -63,6 +63,47 @@
     });
   }
 
+  /* ---- Capability accordion: one open at a time, animated height ---- */
+  var capItems = Array.prototype.slice.call(document.querySelectorAll('.cap-item'));
+  if (capItems.length) {
+    function closeItem(item) {
+      var btn = item.querySelector('.cap-summary');
+      var panel = item.querySelector('.cap-panel');
+      btn.setAttribute('aria-expanded', 'false');
+      panel.style.maxHeight = null;
+      item.classList.remove('open');
+    }
+    function openItem(item) {
+      var btn = item.querySelector('.cap-summary');
+      var panel = item.querySelector('.cap-panel');
+      btn.setAttribute('aria-expanded', 'true');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      item.classList.add('open');
+    }
+    capItems.forEach(function (item) {
+      var btn = item.querySelector('.cap-summary');
+      btn.addEventListener('click', function () {
+        var wasOpen = item.classList.contains('open');
+        capItems.forEach(closeItem);
+        if (!wasOpen) openItem(item);
+      });
+    });
+    // Keep an open panel correctly sized if the viewport reflows it
+    var capResizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(capResizeTimer);
+      capResizeTimer = setTimeout(function () {
+        var openItemEl = document.querySelector('.cap-item.open');
+        if (openItemEl) {
+          var panel = openItemEl.querySelector('.cap-panel');
+          panel.style.maxHeight = 'none';
+          var h = panel.scrollHeight;
+          panel.style.maxHeight = h + 'px';
+        }
+      }, 120);
+    });
+  }
+
   /* ---- Live activity feed: prepend new platform events ---- */
   var activityList = document.getElementById('activity-list');
   if (activityList && !reduceMotion) {
