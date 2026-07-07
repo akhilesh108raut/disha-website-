@@ -98,6 +98,12 @@ section[id] { scroll-margin-top: 90px; }
   margin: 0 0.02em;
 }
 .brand-glyph svg { display: block; width: 100%; height: 100%; }
+/* Needle: red north; south/dot follow the ink token so the needle reads
+   red + ink on light paper and red + white in dark mode */
+.brand-glyph .gn { fill: #E23B2E; }
+.brand-glyph .gs { fill: var(--ink); }
+.brand-glyph .gc { fill: var(--paper); }
+.brand-glyph .gd { fill: var(--ink); }
 
 .main-nav { display: flex; gap: 34px; }
 .main-nav a {
