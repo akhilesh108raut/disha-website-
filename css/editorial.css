@@ -125,6 +125,8 @@ section[id] { scroll-margin-top: 90px; }
 }
 .main-nav a:hover { color: var(--ink); }
 .main-nav a:hover::after { transform: scaleX(1); }
+.main-nav a.active { color: var(--ink); }
+.main-nav a.active::after { transform: scaleX(1); }
 
 /* ---------- Buttons ---------- */
 .btn {
