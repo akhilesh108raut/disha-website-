@@ -697,7 +697,9 @@ section[id] { scroll-margin-top: 90px; }
 .p-step p { font-size: 0.93rem; color: var(--ink-soft); }
 
 /* ---------- Founder note ---------- */
-.founder-band { background: var(--ink); color: var(--paper); }
+/* Always-dark accent band — literal colors, not theme-flipping tokens,
+   since this section stays dark regardless of light/dark mode */
+.founder-band { background: #171712; color: #FAF8F3; }
 .founder-grid {
   display: grid;
   grid-template-columns: 1.5fr 0.9fr;
